@@ -41,56 +41,62 @@ function togglePlayer() {
     return player = 'X';
   }
 }
-//WINNER CHECK
-// function checkWinner() {
 
-//   if (table[0][0] === 'X' && table[0][1] === 'X' && table[0][2] === 'X' ) {
-//     console.log('X wins!')
-//   }
-//   if (table[0][0] === 'O' && table[0][1] === 'O' && table[0][2] === 'O' ) {
-//     console.log('O wins!')
-//   }
-//   if (table[1][0] === 'X' && table[1][1] === 'X' && table[1][2] === 'X' ) {
-//     console.log('X wins!')
-//   }
-//   if (table[1][0] === 'O' && table[1][1] === 'O' && table[1][2] === 'O' ) {
-//     console.log('O wins!')
-//   if (table[2][0] === 'X' && table[2][1] === 'X' && table[2][2] === 'X' ) {
-//     console.log('X wins!')
-//   }
-//   if (table[2][0] === 'O' && table[2][1] === 'O' && table[2][2] === 'O' ) {
-//     console.log('O wins!')
-//   }
-//   if (table[0][0] === 'X' && table[1][0] === 'X' && table[2][0] === 'X' ) {
-//     console.log('X wins!')
-//   }
-//   if (table[0][0] === 'O' && table[1][0] === 'O' && table[2][0] === 'O' ) {
-//     console.log('O wins!')
-//   }
-//   if (table[0][1] === 'X' && table[1][1] === 'X' && table[2][1] === 'X' ) {
-//     console.log('X wins!')
-//   }
-//   if (table[0][1] === 'O' && table[1][1] === 'O' && table[2][1] === 'O' ) {
-//     console.log('O wins!')
-//   if (table[0][2] === 'X' && table[1][2] === 'X' && table[2][2] === 'X' ) {
-//     console.log('X wins!')
-//   }
-//   if (table[0][2] === 'O' && table[1][2] === 'O' && table[2][2] === 'O' ) {
-//     console.log('O wins!')
-//   }
-//   if (table[0][0] === 'X' && table[1][1] === 'X' && table[2][2] === 'X' ) {
-//     console.log('X wins!')
-//   }
-//   if (table[0][0] === 'O' && table[1][1] === 'O' && table[2][2] === 'O' ) {
-//     console.log('O wins!')
-//   }
-//   if (table[0][2] === 'X' && table[1][1] === 'X' && table[2][0] === 'X' ) {
-//     console.log('X wins!')
-//   }
-//   if (table[0][2] === 'O' && table[1][1] === 'O' && table[2][0] === 'O' ) {
-//     console.log('O wins!')
-//   }
-// }
+//WINNER CHECK
+function checkWinner() {
+  if (table[0][0] === 'X' && table[0][1] === 'X' && table[0][2] === 'X' ) {
+    return console.log('X wins!')
+  }
+  if (table[0][0] === 'O' && table[0][1] === 'O' && table[0][2] === 'O' ) {
+    return console.log('O wins!')
+  }
+  if (table[1][0] === 'X' && table[1][1] === 'X' && table[1][2] === 'X' ) {
+    return console.log('X wins!')
+  }
+  if (table[1][0] === 'O' && table[1][1] === 'O' && table[1][2] === 'O' ) {
+    return console.log('O wins!')
+  }
+  if (table[2][0] === 'X' && table[2][1] === 'X' && table[2][2] === 'X' ) {
+    return console.log('X wins!')
+  }
+  if (table[2][0] === 'O' && table[2][1] === 'O' && table[2][2] === 'O' ) {
+    return console.log('O wins!')
+  }
+  if (table[0][0] === 'X' && table[1][0] === 'X' && table[2][0] === 'X' ) {
+    return console.log('X wins!')
+  }
+  if (table[0][0] === 'O' && table[1][0] === 'O' && table[2][0] === 'O' ) {
+    return console.log('O wins!')
+  }
+  if (table[0][1] === 'X' && table[1][1] === 'X' && table[2][1] === 'X' ) {
+    return console.log('X wins!')
+  }
+  if (table[0][1] === 'O' && table[1][1] === 'O' && table[2][1] === 'O' ) {
+    return console.log('O wins!')
+  }
+  if (table[0][2] === 'X' && table[1][2] === 'X' && table[2][2] === 'X' ) {
+    return console.log('X wins!')
+  }
+  if (table[0][2] === 'O' && table[1][2] === 'O' && table[2][2] === 'O' ) {
+    return console.log('O wins!')
+  }
+  if (table[0][0] === 'X' && table[1][1] === 'X' && table[2][2] === 'X' ) {
+    return console.log('X wins!')
+  }
+  if (table[0][0] === 'O' && table[1][1] === 'O' && table[2][2] === 'O' ) {
+    return console.log('O wins!')
+  }
+  if (table[0][2] === 'X' && table[1][1] === 'X' && table[2][0] === 'X' ) {
+    return console.log('X wins!')
+  }
+  if (table[0][2] === 'O' && table[1][1] === 'O' && table[2][0] === 'O' ) {
+    return console.log('O wins!')
+  }
+  prompt.get(['row', 'space'], function (err, result) {
+    if (err) { return onErr(err); }
+    if(result) { return onResult(result); }
+  });
+}
 
 prompt.start();
 
@@ -107,7 +113,7 @@ function onErr(err) {
 
 function onResult(result) {
   clear();
-
+  
   console.log(
     chalk.yellow(
       figlet.textSync('Tic Tac Toe', { horizontalLayout: 'full' })
@@ -115,17 +121,14 @@ function onResult(result) {
   );
 
   console.log('SQUARES ARE REFRENCED BY ROW AND SPACE HORIZONTALLY: \n ROW 0: [0][1][2] \n ROW 1: [0][1][2] \n ROW 2: [0][1][2]');
-
   table[result.row][result.space] = player;
 
   togglePlayer();
   
   console.log(table.toString());
   
-  prompt.get(['row', 'space'], function (err, result) {
-    if (err) { return onErr(err); }
-    if(result) { return onResult(result); }
-  });
+  checkWinner();
+  
 };
 
 
