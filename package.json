@@ -1,0 +1,36 @@
+{
+  "name": "tic-tac-toe",
+  "version": "1.0.0",
+  "description": "play tic-tac-toe in the command line!",
+  "main": "index.js",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "clear": "0.0.1",
+    "cli-table": "^0.3.1",
+    "clui": "^0.3.1",
+    "commander": "^2.9.0",
+    "figlet": "^1.2.0",
+    "github": "^9.2.0",
+    "inquirer": "^3.0.6",
+    "lodash": "^4.17.4",
+    "minimist": "^1.2.0",
+    "preferences": "^0.2.1",
+    "prompt": "^1.0.0",
+    "simple-git": "^1.67.0",
+    "touch": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svey/Tic-Tac-Toe.git"
+  },
+  "author": "svey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/svey/Tic-Tac-Toe/issues"
+  },
+  "homepage": "https://github.com/svey/Tic-Tac-Toe#readme"
+}
